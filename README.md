@@ -19,7 +19,7 @@ Sister sample (static job page): [https://cromservices.github.io/job-page-sample
 - Next.js 15 App Router
 - React 18 and TypeScript
 - Static export (`output: 'export'`) with `basePath` / `assetPrefix` for the project Pages URL `/next-ui-sample`
-- Vitest + Testing Library for `StatusBadge`
+- Vitest + Testing Library for `StatusBadge` (Vite is the test runner only — the app itself is Next.js)
 
 ## Layout
 
