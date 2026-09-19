@@ -4,7 +4,7 @@ Public Next.js App Router sample of how Crom Services closes a **finish-gap**: l
 
 This is a real Next.js app with `output: 'export'`, not a Vite clone labelled as Next. Portfolio overflow sample only — not a client system.
 
-**Live:** [https://cromservices.github.io/next-ui-sample/](https://cromservices.github.io/next-ui-sample/) (project Pages from the `gh-pages` branch — enable once under Settings → Pages if the URL still 404s)
+**Live:** [https://cromservices.github.io/next-ui-sample/](https://cromservices.github.io/next-ui-sample/)
 
 Sister sample (static job page): [https://cromservices.github.io/job-page-sample/](https://cromservices.github.io/job-page-sample/)
 
@@ -55,7 +55,7 @@ npm run build:pages
 
 GitHub Actions on `main` runs `build:pages` and publishes the `out/` folder to the `gh-pages` branch. GitHub Pages serves that branch at the live URL. `public/.nojekyll` (and the deploy action) keep the `_next` asset folder from being ignored by Jekyll.
 
-Enable the project site once (admin): **Settings → Pages → Deploy from a branch → `gh-pages` / root → Save**. The export is already on `gh-pages`; after that switch the live URL should return 200.
+GitHub Pages is enabled from the `gh-pages` branch (root). After merge to `main`, the Action refreshes that branch.
 
 ## Capability
 
