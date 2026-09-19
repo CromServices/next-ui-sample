@@ -66,7 +66,7 @@ export default function HomePage() {
         <p>Crom Services · Perth WA · Remote across Australia</p>
         <p>
           Site:{' '}
-          <a href="https://cromservices.com.au">https://cromservices.com.au</a>
+          <a href="https://cromservices.github.io/job-page-sample/packs/">https://cromservices.github.io/job-page-sample/packs/</a>
           {' · '}
           Contact:{' '}
           <a href="mailto:cromservices@gmail.com">cromservices@gmail.com</a>
