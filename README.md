@@ -1,36 +1,59 @@
-# React UI sample — Crom Services
+# Next.js UI sample — Crom Services
 
-Public sample of how Crom Services approaches scoped React / Next.js UI work.
+Public Next.js App Router sample of how Crom Services closes a **finish-gap**: leave half-built chrome as stub, and ship one scoped component (`StatusBadge` density / tone).
 
-This folder demonstrates a minimal React + TypeScript UI with one focused component change: a StatusBadge density toggle that keeps layout and surrounding copy untouched. Portfolio overflow sample only — not a client system.
+This is a real Next.js app with `output: 'export'`, not a Vite clone labelled as Next. Portfolio overflow sample only — not a client system.
 
-Vite is used here for a small, fast scaffold. The same scoped-component pattern applies to Next.js (App Router or Pages) delivery.
+**Live:** [https://cromservices.github.io/next-ui-sample/](https://cromservices.github.io/next-ui-sample/)
+
+Sister sample (static job page): [https://cromservices.github.io/job-page-sample/](https://cromservices.github.io/job-page-sample/)
 
 ## Purpose
 
-- Clear, reviewable UI change pattern suitable for a small PR
-- Illustrates Crom Services capability for React/Next UI overflow and small builds
-- Keeps the change inside one component boundary
+- Clickable public demo of a Next.js App Router delivery on GitHub Pages
+- Reviewable UI change: stub panel stays unfinished; StatusBadge is the shipped piece
+- Same component-boundary pattern used for small React / Next PRs
 
 ## Stack
 
+- Next.js 15 App Router
 - React 18 and TypeScript
-- Vite for local build and preview
-- Vitest + Testing Library for component checks
-- Pattern is Next.js-capable (same component can drop into a Next page or layout)
+- Static export (`output: 'export'`) with `basePath` / `assetPrefix` for the project Pages URL `/next-ui-sample`
+- Vitest + Testing Library for `StatusBadge`
 
 ## Layout
 
-- src/App.tsx — single demo page
-- src/components/StatusBadge.tsx — scoped density/tone UI change
-- src/components/StatusBadge.test.tsx — component tests
-- src/styles.css — page chrome only
+- `app/page.tsx` — finish-gap demo page (server component)
+- `app/layout.tsx` — document shell
+- `src/components/StatusBadge.tsx` — scoped density / tone UI
+- `src/components/StatusBadgeDemo.tsx` — client density toggle
+- `src/components/StatusBadge.test.tsx` — component tests
+- `.github/workflows/deploy-pages.yml` — build + deploy to GitHub Pages on `main`
 
 ## How to run
 
-Install dependencies with the package manager, then run the test script and build.
+```bash
+npm install
+npm test
+npm run dev
+```
 
-Optional: start the Vite dev server with the dev script.
+Dev server: http://localhost:3000
+
+Static export (local paths, no Pages prefix):
+
+```bash
+npm run build
+npm run preview
+```
+
+Pages-shaped export (`/next-ui-sample` prefix, matches the live site):
+
+```bash
+npm run build:pages
+```
+
+GitHub Actions on `main` runs `build:pages` and publishes the `out/` folder to the `gh-pages` branch. GitHub Pages serves that branch at the live URL. `public/.nojekyll` (and the deploy action) keep the `_next` asset folder from being ignored by Jekyll.
 
 ## Capability
 
@@ -39,10 +62,10 @@ Optional: start the Vite dev server with the dev script.
 - React / Next.js UI work
 - API and webhook work
 
-Crom Services · Perth WA · Remote across Australia
+Crom Services · Perth WA · Remote across Australia  
 Trading as Crom Services
 
-Site: https://cromservices.com.au (placeholder)
+Site: https://cromservices.com.au  
 Contact: cromservices@gmail.com
 
 ## License
