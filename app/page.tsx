@@ -4,7 +4,7 @@ export default function HomePage() {
   return (
     <div className="wrap">
       <header className="topbar">
-        <p className="brand">Crom Services · Perth WA · Remote</p>
+        <p className="brand">Crom Services · Australia</p>
         <span className="sample">Next.js App Router · static export</span>
       </header>
 
@@ -63,7 +63,7 @@ export default function HomePage() {
       </section>
 
       <footer>
-        <p>Crom Services · Perth WA · Remote across Australia</p>
+        <p>Crom Services · Australia</p>
         <p>
           Site:{' '}
           <a href="https://cromservices.github.io/job-page-sample/packs/">https://cromservices.github.io/job-page-sample/packs/</a>
