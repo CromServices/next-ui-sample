@@ -1,12 +1,11 @@
+import { CromFooter, CromHeader } from 'crom-shared/react';
 import { StatusBadgeDemo } from '@/src/components/StatusBadgeDemo';
 
 export default function HomePage() {
   return (
+    <>
+    <CromHeader tag="Next.js App Router · static export" />
     <div className="wrap">
-      <header className="topbar">
-        <p className="brand">Crom Services · Australia</p>
-        <span className="sample">Next.js App Router · static export</span>
-      </header>
 
       <p className="banner">Finish-gap sample</p>
       <h1>Stub screen, then one scoped ship</h1>
@@ -62,17 +61,14 @@ export default function HomePage() {
         </ul>
       </section>
 
-      <footer>
-        <p>Crom Services · Australia</p>
+      <CromFooter contact>
         <p>
-          Site:{' '}
+          Packs:{' '}
           <a href="https://cromservices.github.io/job-page-sample/packs/">https://cromservices.github.io/job-page-sample/packs/</a>
-          {' · '}
-          Contact:{' '}
-          <a href="mailto:cromservices@gmail.com">cromservices@gmail.com</a>
         </p>
         <p>Portfolio sample only · MIT · not a client system</p>
-      </footer>
+      </CromFooter>
     </div>
+    </>
   );
 }

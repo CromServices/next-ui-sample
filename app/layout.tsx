@@ -1,11 +1,6 @@
 import type { Metadata } from 'next';
-import { Figtree } from 'next/font/google';
+import 'crom-shared/theme.css';
 import './globals.css';
-
-const figtree = Figtree({
-  subsets: ['latin'],
-  display: 'swap',
-});
 
 export const metadata: Metadata = {
   title: 'Crom Services — Next.js UI sample',
@@ -20,7 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={figtree.className}>{children}</body>
+      <body>{children}</body>
     </html>
   );
 }
