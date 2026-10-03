@@ -1,10 +1,11 @@
 import { CromFooter, CromHeader } from 'crom-shared/react';
 import { StatusBadgeDemo } from '@/src/components/StatusBadgeDemo';
+import { CROM_LOGO_BASE } from './crom-logo';
 
 export default function HomePage() {
   return (
     <>
-    <CromHeader tag="Next.js App Router · static export" />
+    <CromHeader tag="Next.js App Router · static export" logoBase={CROM_LOGO_BASE} />
     <div className="wrap">
 
       <p className="banner">Finish-gap sample</p>
